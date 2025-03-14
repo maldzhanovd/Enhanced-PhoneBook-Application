@@ -1,0 +1,14 @@
+CREATE DATABASE phonebook;
+
+USE phonebook;
+CREATE TABLE contacts (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+phone VARCHAR(15) NOT NULL UNIQUE,
+email VARCHAR(100),
+address TEXT
+);
+
+INSERT INTO contacts (name, phone, email, address) VALUES
+('John Doe', '1234567890', 'john.doe@example.com', '123 Elm Street'),
+('Jane Smith', '9876543210', 'jane.smith@example.com', '456 Oak Avenue');
